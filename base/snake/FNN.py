@@ -20,6 +20,8 @@ class FNN:
             l = split[i - 1]
             m = split[i] - self.neurons_count[i]
             r = split[i]
+            # l to m for layer weights
+            # m to r for biases
             self.layers.append(LayerDense(
                 n_inputs=self.neurons_count[i], n_neurons=self.neurons_count[i-1],
                 weights=params[l:m], biases=params[m:r]))

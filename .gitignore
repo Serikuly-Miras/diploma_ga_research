@@ -1,5 +1,6 @@
 # main media folder
 media
+saves
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
