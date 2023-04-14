@@ -129,6 +129,30 @@ class SnakeGA():
         brain = FNN(neurons_count=self.nn_topology,
                     activations=self.nn_activations, params=self.genes.to_numpy()[snake_index])
 
+        # fit = 0.0
+        # prev = 0
+        # steps_left = self.steps_without_food
+        # while (steps_left > 0):
+        #     nn_input = np.zeros(shape=self.input_neurons_count)
+        #     nn_input[prev] = 1
+        #     self.prep_vision(nn_input=nn_input, sn=snake_index)
+        #     move = int(np.argmax(brain.predict(input=nn_input)))
+
+        #     if (move == int((prev**3) * ti.sin(prev*24.3)) % 4):
+        #         steps_left += 1
+        #         fit += 1
+        #     elif (prev + move == 3):
+        #         fit += 2
+        #         steps_left -= 3
+        #     else:
+        #         fit -= 0.5
+        #         steps_left -= 1
+
+        #     prev = move
+        #     steps_left -= 2
+
+        # return fit
+
         mid = self.field_size//2
         self.bodies[snake_index, 0].xy = mid, mid
 
